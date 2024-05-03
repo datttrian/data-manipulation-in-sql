@@ -1,6 +1,6 @@
-DROP TABlE cities, countries, languages, economies, currencies, populations, economies2015, economies2019, eu_countries;
+DROP TABlE match, countries, languages, economies, currencies, populations, economies2015, economies2019, eu_countries;
 
-CREATE TABLE cities (
+CREATE TABLE match (
   name VARCHAR PRIMARY KEY,
   country_code VARCHAR,
   city_proper_pop REAL,
@@ -89,7 +89,7 @@ CREATE TABLE eu_countries (
   name VARCHAR
 );
 
-\copy cities FROM '/tmp/cities.csv' DELIMITER ',' CSV HEADER;
+\copy match FROM '/tmp/match.csv' DELIMITER ',' CSV HEADER;
 \copy economies FROM '/tmp/economies.csv' DELIMITER ',' CSV HEADER;
 \copy currencies FROM '/tmp/currencies.csv' DELIMITER ',' CSV HEADER;
 \copy countries FROM '/tmp/countries.csv' DELIMITER ',' CSV HEADER;

@@ -1,11 +1,3 @@
-SELECT
-    'DROP VIEW ' || string_agg (table_name, ', ') || ' cascade;'
-FROM
-    information_schema.views
-WHERE
-    table_schema NOT IN ('pg_catalog', 'information_schema')
-    AND table_name !~ '^pg_';
-
 -- added/edited
 CREATE VIEW teams_germany AS
 SELECT

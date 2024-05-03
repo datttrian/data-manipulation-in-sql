@@ -20,6 +20,13 @@ CREATE TABLE team (
     team_short_name VARCHAR(10)
 );
 
+CREATE TABLE league (
+    id INT PRIMARY KEY,
+    country_id INT,
+    name VARCHAR(255)
+);
+
 \copy match FROM '/tmp/match.csv' DELIMITER ',' CSV HEADER;
 \copy country FROM '/tmp/country.csv' DELIMITER ',' CSV HEADER;
 \copy team FROM '/tmp/team.csv' DELIMITER ',' CSV HEADER;
+\copy league FROM '/tmp/league.csv' DELIMITER ',' CSV HEADER;

@@ -6,5 +6,9 @@ docker run --rm --name pg-docker -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=lo
 
 docker cp match.csv  pg-docker:/tmp/match.csv
 docker cp country.csv  pg-docker:/tmp/country.csv
+docker cp team.csv  pg-docker:/tmp/team.csv
+docker cp league.csv  pg-docker:/tmp/league.csv
 
 docker exec -it pg-docker /bin/bash
+
+
